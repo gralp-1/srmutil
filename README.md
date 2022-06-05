@@ -7,5 +7,6 @@ Features:
 - [x] Useful screenshot organisation (Stored with a readable timestamp, in a folder with the name of the world or
   server,
   with coordinates)
+- [x] Snap look
 - [ ] Screenshot taking with a delay + countdown
-- [ ] Fine boat direction adjustment
+- [ ] Change the message generated from screenshots

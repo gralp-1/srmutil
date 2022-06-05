@@ -28,8 +28,8 @@ public class FineAdjustment {
                     if (keyBinding.wasPressed()) {
                         assert CLIENT.player != null;
 //                        Snap to the snap constant
-                        float new_yaw = (float) Math.round(CLIENT.player.getYaw() / SRMUtil.snap_amount) * SRMUtil.snap_amount;
-                        CLIENT.player.setYaw(new_yaw);
+                        double new_yaw = Math.round(CLIENT.player.getYaw() / SRMUtil.snap_amount) * SRMUtil.snap_amount;
+                        CLIENT.player.setYaw((float) new_yaw);
                     }
                 }
         );

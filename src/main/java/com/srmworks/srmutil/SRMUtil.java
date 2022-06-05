@@ -14,7 +14,8 @@ public class SRMUtil implements ModInitializer {
     public static final MinecraftClient CLIENT = MinecraftClient.getInstance();
     public static final SimpleConfig CONFIG = SimpleConfig.of("SRMUtil").provider(SRMUtil::provider).request();
     public static final String date_format = CONFIG.getOrDefault("date_format", "yyyy-MM-dd HH:mm:ss");
-    public static final float snap_amount = (float) CONFIG.getOrDefault("snap_amount", 45.0);
+    public static final double snap_amount = CONFIG.getOrDefault("snap_amount", 45.0);
+    public static final double millis = CONFIG.getOrDefault("millis", 1000.0);
 
     private static String provider(String fname) {
         return """
@@ -23,9 +24,12 @@ public class SRMUtil implements ModInitializer {
                 # How much to snap by with fine adjustment
                 snap_constant=45.0
                                 
-                # Screenshot date format (don't touch if you don't know what you're doing)
+                # Screenshot date format
                 # Docs here: https://docs.oracle.com/javase/7/docs/api/java/text/SimpleDateFormat.html
-                date_format="yyyy-MM-dd HH:mm:ss"
+                date_format=yyyy-MM-dd HH:mm:ss
+                                
+                # Amout of screenshot delay in ms
+                millis=1000.0
                 """;
     }
 

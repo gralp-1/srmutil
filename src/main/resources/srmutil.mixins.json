@@ -6,7 +6,8 @@
   "mixins": [
   ],
   "client": [
-    "ScreenShotMixin"
+    "ScreenshotDelay",
+    "ScreenshotMixin"
   ],
   "injectors": {
     "defaultRequire": 1
