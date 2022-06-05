@@ -1,5 +1,6 @@
-package com.srmworks.srmutil.mixin;
+package com.srmworks.srmutil.features.mixin;
 
+import com.srmworks.srmutil.SRMUtil;
 import net.minecraft.client.util.ScreenshotRecorder;
 import net.minecraft.entity.player.PlayerEntity;
 import org.spongepowered.asm.mixin.Mixin;
@@ -32,7 +33,7 @@ public abstract class ScreenShotMixin {
 
 
 //		Get the dateTime formatted
-        DateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
+        DateFormat dateFormat = new SimpleDateFormat(SRMUtil.date_format);
         sb.append(dateFormat.format(System.currentTimeMillis()));
 //		Get the player's position
         PlayerEntity player = CLIENT.world.getPlayerByUuid(CLIENT.player.getUuid());
